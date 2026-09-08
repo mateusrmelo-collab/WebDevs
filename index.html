@@ -1,0 +1,1217 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c0e0b" />
+    <meta
+      name="description"
+      content="Do primeiro código ao seu projeto na web. Conheça o curso de desenvolvimento web de Mateus Rodrigues: HTML, CSS, JavaScript, PHP, React e SQL. Lançamento em 15 de setembro de 2026."
+    />
+    <meta
+      property="og:title"
+      content="DevMateus — Seu futuro é feito de código."
+    />
+    <meta
+      property="og:description"
+      content="HTML, CSS, JavaScript, PHP, React e SQL. Uma jornada do zero à prática com Mateus Rodrigues. Lançamento: 15 de setembro de 2026."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <title>DevMateus — Do zero ao seu projeto na web</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <svg
+      class="svg-sprite"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24">
+        <path d="M6 18 18 6M6 6h12v12" />
+      </symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24">
+        <path d="M4 12h16m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 24 24">
+        <path d="M12 4v16m-6-6 6 6 6-6" />
+      </symbol>
+      <symbol id="i-code" viewBox="0 0 24 24">
+        <path d="m7 6-6 6 6 6m10-12 6 6-6 6M14.5 3l-5 18" />
+      </symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="3" />
+        <path d="M7 3v4m10-4v4M3 11h18m-14 5h3m4 0h3" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M6 18 18 6" />
+      </symbol>
+      <symbol id="i-terminal" viewBox="0 0 24 24">
+        <rect x="2" y="3" width="20" height="18" rx="3" />
+        <path d="m6 8 4 4-4 4m7 0h5" />
+      </symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24">
+        <path d="m12 3 10 5-10 5L2 8l10-5Zm-9 9 9 5 9-5M3 16l9 5 9-5" />
+      </symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <ellipse cx="12" cy="12" rx="4" ry="9" />
+        <path d="M3 12h18" />
+      </symbol>
+      <symbol id="i-files" viewBox="0 0 24 24">
+        <path d="M8 8H3v13h12v-5M8 2h8l5 5v9H8V2Zm8 0v5h5" />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="10" cy="10" r="7" />
+        <path d="m15 15 6 6" />
+      </symbol>
+      <symbol id="i-git" viewBox="0 0 24 24">
+        <circle cx="6" cy="5" r="2" />
+        <circle cx="6" cy="19" r="2" />
+        <circle cx="18" cy="5" r="2" />
+        <path d="M6 7v10m12-10v3a4 4 0 0 1-4 4H6" />
+      </symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24">
+        <path
+          d="m9 3-1 3-3 1-2 3 2 2-1 3 3 3 3-1 2 3 3-1 1-3 3-1 2-3-2-2 1-3-3-3-3 1-2-3Z"
+        />
+        <circle cx="12" cy="12" r="3" />
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24">
+        <rect x="8" y="8" width="12" height="13" rx="2" />
+        <path d="M15 8V3H3v12h5" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24">
+        <path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" />
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 80 80">
+        <path d="M40 3v74M3 40h74M14 14l52 52m0-52L14 66" stroke-width="9" />
+      </symbol>
+      <symbol id="i-github" viewBox="0 0 24 24">
+        <path
+          d="M9 19c-4 1-4-2-6-2m12 4v-3.4c0-1 .1-1.4-.5-2 2.9-.3 5.5-1.4 5.5-6.2a4.8 4.8 0 0 0-1.3-3.3 4.4 4.4 0 0 0-.1-3.3S17.5 2.5 15 4a11.4 11.4 0 0 0-6 0C6.5 2.5 5.4 2.8 5.4 2.8a4.4 4.4 0 0 0-.1 3.3A4.8 4.8 0 0 0 4 9.4c0 4.8 2.6 5.9 5.5 6.2-.6.6-.6 1.2-.5 2V21"
+        />
+      </symbol>
+    </svg>
+    <a class="skip-link" href="#principal">Pular para o conteúdo</a>
+
+    <header class="site-header" id="topo">
+      <div class="container header-inner">
+        <a href="#inicio" class="brand" aria-label="DevMateus, início">
+          <span class="brand-mark"
+            ><svg class="icon"><use href="#i-code" /></svg
+          ></span>
+          <span
+            >dev<span class="brand-weight">mateus</span
+            ><span class="brand-dot">.</span></span
+          >
+        </a>
+        <nav class="desktop-nav" aria-label="Navegação principal">
+          <a href="#curso">O curso</a>
+          <a href="#conteudo">O que você vai aprender</a>
+          <a href="#mateus">Quem ensina</a>
+          <a href="#duvidas">Dúvidas</a>
+        </nav>
+        <button class="button button-header" type="button" data-open-calendar>
+          Salvar a data <svg class="icon"><use href="#i-arrow-up-right" /></svg>
+        </button>
+        <button
+          class="menu-toggle icon-button"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Abrir menu"
+        >
+          <svg class="icon menu-icon"><use href="#i-menu" /></svg
+          ><svg class="icon close-icon"><use href="#i-close" /></svg>
+        </button>
+      </div>
+      <nav
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-label="Navegação móvel"
+        hidden
+      >
+        <a href="#curso">O curso <span>01</span></a>
+        <a href="#conteudo">O que você vai aprender <span>02</span></a>
+        <a href="#mateus">Quem ensina <span>03</span></a>
+        <a href="#duvidas">Dúvidas <span>04</span></a>
+        <button class="button button-primary" type="button" data-open-calendar>
+          Salvar a data <svg class="icon"><use href="#i-calendar" /></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="principal">
+      <section class="hero-section" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-grid-bg" aria-hidden="true"></div>
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="launch-badge">
+                <span class="status-dot"></span
+                ><span id="launch-badge-text">LANÇAMENTO · 15 DE SETEMBRO</span
+                ><span class="badge-year">2026</span>
+              </div>
+              <h1 id="hero-title">
+                Seu futuro é<br /><span>feito de código.</span>
+              </h1>
+              <p class="hero-description">
+                Tire suas ideias do papel e coloque na web. Aprenda
+                <strong>HTML, CSS, JavaScript, PHP, React e SQL</strong> em uma
+                jornada do zero à prática.
+              </p>
+              <div class="hero-actions">
+                <button
+                  class="button button-primary"
+                  type="button"
+                  data-open-calendar
+                >
+                  Quero começar essa jornada
+                  <svg class="icon"><use href="#i-arrow-up-right" /></svg>
+                </button>
+                <a class="button button-text" href="#conteudo"
+                  >Explorar o curso
+                  <svg class="icon"><use href="#i-arrow-down" /></svg
+                ></a>
+              </div>
+              <div class="hero-author">
+                <img src="assets/mateus.jpg" alt="" width="42" height="42" />
+                <div>
+                  <span>Com <strong>Mateus Rodrigues</strong></span
+                  ><small
+                    >Desenvolvedor. Criador. Seu guia nessa jornada.</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="hero-art"
+              aria-label="Exemplo interativo de um projeto web"
+            >
+              <div class="orbit orbit-one" aria-hidden="true"></div>
+              <div class="orbit orbit-two" aria-hidden="true"></div>
+              <svg class="icon art-spark" aria-hidden="true">
+                <use href="#i-spark" />
+              </svg>
+              <div class="floating-label">
+                <span class="status-dot"></span>IDEIA → CÓDIGO → REALIDADE
+              </div>
+              <div class="code-window">
+                <div class="editor-titlebar">
+                  <div class="window-dots" aria-hidden="true">
+                    <i></i><i></i><i></i>
+                  </div>
+                  <span>meu-primeiro-projeto</span
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-code" />
+                  </svg>
+                </div>
+                <div class="editor-body">
+                  <div class="editor-sidebar" aria-hidden="true">
+                    <span class="active"
+                      ><svg class="icon"><use href="#i-files" /></svg></span
+                    ><span
+                      ><svg class="icon"><use href="#i-search" /></svg></span
+                    ><span
+                      ><svg class="icon"><use href="#i-git" /></svg></span
+                    ><span class="sidebar-bottom"
+                      ><svg class="icon"><use href="#i-settings" /></svg
+                    ></span>
+                  </div>
+                  <div class="editor-workspace">
+                    <div
+                      class="editor-tabs"
+                      role="tablist"
+                      aria-label="Arquivos do exemplo"
+                    >
+                      <button
+                        id="tab-html"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="code-panel"
+                        tabindex="0"
+                        data-code="html"
+                      >
+                        <span class="file-type html-type">&lt;&gt;</span
+                        >index.html
+                      </button>
+                      <button
+                        id="tab-css"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="code-panel"
+                        tabindex="-1"
+                        data-code="css"
+                      >
+                        <span class="file-type css-type">#</span>style.css
+                      </button>
+                      <button
+                        id="tab-js"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="code-panel"
+                        tabindex="-1"
+                        data-code="js"
+                      >
+                        <span class="file-type js-type">JS</span>app.js
+                      </button>
+                    </div>
+                    <div
+                      id="code-panel"
+                      class="code-panel"
+                      role="tabpanel"
+                      aria-labelledby="tab-html"
+                      tabindex="0"
+                    >
+                      <button
+                        class="copy-code icon-button"
+                        type="button"
+                        id="copy-code"
+                        aria-label="Copiar código do exemplo"
+                        title="Copiar código"
+                      >
+                        <svg class="icon"><use href="#i-copy" /></svg>
+                      </button>
+                      <pre><code id="code-content"></code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="editor-status">
+                  <span
+                    ><svg class="icon"><use href="#i-git" /></svg> main*</span
+                  ><span
+                    ><svg class="icon"><use href="#i-check" /></svg> Tudo começa
+                    aqui.</span
+                  ><span id="editor-language">HTML</span>
+                </div>
+              </div>
+              <div class="project-preview" id="project-preview">
+                <div class="preview-titlebar">
+                  <div class="preview-dots" aria-hidden="true">
+                    <i></i><i></i><i></i>
+                  </div>
+                  <span>meu-projeto.dev</span
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-globe" />
+                  </svg>
+                </div>
+                <div class="preview-content">
+                  <span class="preview-eyebrow" id="preview-eyebrow"
+                    >MEU PRIMEIRO PROJETO</span
+                  >
+                  <h2 id="hello">Olá, mundo<span>.</span></h2>
+                  <p id="preview-description">Toda grande ideia começa aqui.</p>
+                  <button id="start" type="button">
+                    <span id="preview-button-label">Dar o primeiro passo</span
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-arrow-up-right" />
+                    </svg>
+                  </button>
+                </div>
+                <span class="preview-cursor" aria-hidden="true"
+                  ><svg viewBox="0 0 24 28">
+                    <path
+                      d="M3 2v21l6-6 4 9 4-2-4-9h9Z"
+                      fill="currentColor"
+                      stroke="#10140b"
+                      stroke-width="1.6"
+                    /></svg
+                  ><span>você</span></span
+                >
+              </div>
+              <div class="art-caption">
+                <span class="tiny-cross" aria-hidden="true">+</span> SEU
+                PRIMEIRO “EU QUE FIZ.”
+              </div>
+            </div>
+          </div>
+
+          <div class="countdown-card" id="lancamento">
+            <div class="countdown-copy">
+              <span class="eyebrow"
+                ><span class="mini-line"></span
+                ><span id="countdown-eyebrow"
+                  >O PRÓXIMO CAPÍTULO TEM DATA</span
+                ></span
+              >
+              <h2 id="countdown-title">A gente se encontra em setembro.</h2>
+              <p>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-calendar" /></svg
+                ><time datetime="2026-09-15T00:00:00-03:00"
+                  >15 de setembro de 2026</time
+                ><span class="date-separator">·</span><span>00h, Brasília</span>
+              </p>
+            </div>
+            <div
+              class="countdown"
+              role="timer"
+              aria-label="Tempo restante para o lançamento"
+              aria-live="off"
+            >
+              <div class="countdown-unit">
+                <span class="countdown-number" id="days">--</span
+                ><span class="countdown-label">DIAS</span>
+              </div>
+              <span class="countdown-colon" aria-hidden="true">:</span>
+              <div class="countdown-unit">
+                <span class="countdown-number" id="hours">--</span
+                ><span class="countdown-label">HORAS</span>
+              </div>
+              <span class="countdown-colon" aria-hidden="true">:</span>
+              <div class="countdown-unit">
+                <span class="countdown-number" id="minutes">--</span
+                ><span class="countdown-label">MINUTOS</span>
+              </div>
+              <span class="countdown-colon" aria-hidden="true">:</span>
+              <div class="countdown-unit seconds-unit">
+                <span class="countdown-number" id="seconds">--</span
+                ><span class="countdown-label">SEGUNDOS</span>
+              </div>
+            </div>
+            <p class="sr-only" id="launch-status" role="status"></p>
+          </div>
+
+          <div class="tech-strip" aria-label="Tecnologias do curso">
+            <p>UMA STACK.<br /><strong>INFINITAS POSSIBILIDADES.</strong></p>
+            <div class="tech-logos">
+              <span
+                ><img
+                  src="assets/icons/html.svg"
+                  alt=""
+                  width="29"
+                  height="29"
+                />HTML</span
+              >
+              <span
+                ><img
+                  src="assets/icons/css.svg"
+                  alt=""
+                  width="29"
+                  height="29"
+                />CSS</span
+              >
+              <span
+                ><img
+                  src="assets/icons/javascript.svg"
+                  alt=""
+                  width="27"
+                  height="27"
+                />JavaScript</span
+              >
+              <span
+                ><img
+                  src="assets/icons/php.svg"
+                  alt=""
+                  width="39"
+                  height="29"
+                />PHP</span
+              >
+              <span
+                ><img
+                  src="assets/icons/react.svg"
+                  alt=""
+                  width="30"
+                  height="30"
+                />React</span
+              >
+              <span
+                ><img
+                  src="assets/icons/mysql.svg"
+                  alt=""
+                  width="35"
+                  height="31"
+                />SQL <small>/ MySQL</small></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="course-section section"
+        id="curso"
+        aria-labelledby="course-title"
+      >
+        <div class="container">
+          <div class="section-heading split-heading">
+            <div>
+              <span class="eyebrow section-eyebrow"
+                ><span class="section-number">01 /</span> APRENDER
+                CONSTRUINDO</span
+              >
+              <h2 id="course-title">
+                Menos teoria solta.<br />Mais
+                <span class="muted-heading">projeto funcionando.</span>
+              </h2>
+            </div>
+            <p>
+              Você não precisa saber tudo para começar.<br />Precisa de uma
+              base, um caminho e vontade de colocar a mão no código.
+            </p>
+          </div>
+          <div class="benefits-grid">
+            <article class="benefit-card">
+              <div class="benefit-top">
+                <span class="feature-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-terminal" /></svg></span
+                ><span class="card-number">01</span>
+              </div>
+              <h3>Uma base que faz sentido.</h3>
+              <p>
+                Entenda o porquê de cada linha. Comece pelos fundamentos e
+                avance sem pular as etapas que realmente importam.
+              </p>
+              <span class="card-footnote"
+                ><span class="status-dot"></span>DO ZERO, SEM ATALHOS</span
+              >
+            </article>
+            <article class="benefit-card">
+              <div class="benefit-top">
+                <span class="feature-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-layers" /></svg></span
+                ><span class="card-number">02</span>
+              </div>
+              <h3>Do front ao back.</h3>
+              <p>
+                Conecte interfaces, lógica e banco de dados. Aprenda a enxergar
+                a aplicação inteira, não só uma peça do quebra-cabeça.
+              </p>
+              <span class="card-footnote"
+                ><span class="status-dot"></span>AS PEÇAS SE CONECTAM</span
+              >
+            </article>
+            <article class="benefit-card">
+              <div class="benefit-top">
+                <span class="feature-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-globe" /></svg></span
+                ><span class="card-number">03</span>
+              </div>
+              <h3>Ideias que saem do papel.</h3>
+              <p>
+                Transforme o que aprende em projetos. Da primeira página a uma
+                aplicação com dados, construa algo para chamar de seu.
+              </p>
+              <span class="card-footnote"
+                ><span class="status-dot"></span>APRENDA. CRIE. PUBLIQUE.</span
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="curriculum-section section"
+        id="conteudo"
+        aria-labelledby="curriculum-title"
+      >
+        <div class="container curriculum-layout">
+          <div class="curriculum-intro">
+            <span class="eyebrow section-eyebrow"
+              ><span class="section-number">02 /</span> SUA JORNADA NO
+              CÓDIGO</span
+            >
+            <h2 id="curriculum-title">
+              Da primeira tag<br />ao
+              <span class="accent-text">seu próximo <br />grande projeto.</span>
+            </h2>
+            <p>
+              Uma trilha que conecta os fundamentos da web às ferramentas para
+              construir aplicações de verdade.
+            </p>
+            <div class="path-visual" aria-hidden="true">
+              <span class="path-start">&lt;h1&gt;</span
+              ><span class="path-dots"></span
+              ><svg class="icon"><use href="#i-git" /></svg
+              ><span class="path-dots"></span
+              ><span class="path-end"
+                ><svg class="icon"><use href="#i-globe" /></svg> deploy</span
+              >
+            </div>
+            <div class="curriculum-note">
+              <svg class="icon" aria-hidden="true"><use href="#i-code" /></svg
+              ><span
+                >Front-end + back-end + banco de dados.<br /><strong
+                  >O caminho completo, uma etapa por vez.</strong
+                ></span
+              >
+            </div>
+            <a class="text-link" href="#lancamento"
+              >Começa em 15 de setembro
+              <svg class="icon"><use href="#i-arrow-up-right" /></svg
+            ></a>
+          </div>
+          <div class="modules" aria-label="Trilha de aprendizado">
+            <div class="modules-heading">
+              <span>O QUE VOCÊ VAI APRENDER</span><span>06 ETAPAS</span>
+            </div>
+            <details class="module" name="curriculum" open>
+              <summary>
+                <span class="module-number">01</span
+                ><span class="module-logo double-logo"
+                  ><img
+                    src="assets/icons/html.svg"
+                    alt=""
+                    width="31"
+                    height="31" /><img
+                    src="assets/icons/css.svg"
+                    alt=""
+                    width="22"
+                    height="22" /></span
+                ><span class="module-name"
+                  ><strong>HTML & CSS</strong
+                  ><small>O começo de toda boa interface</small></span
+                ><svg class="icon module-plus" aria-hidden="true">
+                  <use href="#i-plus" />
+                </svg>
+              </summary>
+              <div class="module-content">
+                <p>
+                  Estruture páginas com significado e transforme layouts em
+                  interfaces que funcionam em qualquer tela.
+                </p>
+                <div class="topic-tags">
+                  <span>HTML semântico</span><span>Flexbox & Grid</span
+                  ><span>Responsividade</span>
+                </div>
+                <div class="module-project">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow-up-right" /></svg
+                  >Na prática: sua primeira landing page.
+                </div>
+              </div>
+            </details>
+            <details class="module" name="curriculum">
+              <summary>
+                <span class="module-number">02</span
+                ><span class="module-logo"
+                  ><img
+                    src="assets/icons/javascript.svg"
+                    alt=""
+                    width="29"
+                    height="29" /></span
+                ><span class="module-name"
+                  ><strong>JavaScript</strong
+                  ><small>Dê vida ao que você cria</small></span
+                ><svg class="icon module-plus" aria-hidden="true">
+                  <use href="#i-plus" />
+                </svg>
+              </summary>
+              <div class="module-content">
+                <p>
+                  Entenda a lógica por trás das interações. Trabalhe com
+                  eventos, manipulação da página e dados de APIs.
+                </p>
+                <div class="topic-tags">
+                  <span>Lógica de programação</span><span>DOM & eventos</span
+                  ><span>Fetch & APIs</span>
+                </div>
+                <div class="module-project">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow-up-right" /></svg
+                  >Na prática: uma interface que responde ao usuário.
+                </div>
+              </div>
+            </details>
+            <details class="module" name="curriculum">
+              <summary>
+                <span class="module-number">03</span
+                ><span class="module-logo"
+                  ><img
+                    src="assets/icons/react.svg"
+                    alt=""
+                    width="33"
+                    height="33" /></span
+                ><span class="module-name"
+                  ><strong>React</strong
+                  ><small
+                    >Pense em componentes. Crie possibilidades.</small
+                  ></span
+                ><svg class="icon module-plus" aria-hidden="true">
+                  <use href="#i-plus" />
+                </svg>
+              </summary>
+              <div class="module-content">
+                <p>
+                  Organize sua interface em componentes reutilizáveis. Conecte
+                  estado, propriedades e efeitos para construir aplicações
+                  dinâmicas.
+                </p>
+                <div class="topic-tags">
+                  <span>Componentes & JSX</span><span>Props & estado</span
+                  ><span>Hooks</span>
+                </div>
+                <div class="module-project">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow-up-right" /></svg
+                  >Na prática: uma aplicação em componentes.
+                </div>
+              </div>
+            </details>
+            <details class="module" name="curriculum">
+              <summary>
+                <span class="module-number">04</span
+                ><span class="module-logo"
+                  ><img
+                    src="assets/icons/php.svg"
+                    alt=""
+                    width="39"
+                    height="33" /></span
+                ><span class="module-name"
+                  ><strong>PHP</strong
+                  ><small>A lógica do outro lado da tela</small></span
+                ><svg class="icon module-plus" aria-hidden="true">
+                  <use href="#i-plus" />
+                </svg>
+              </summary>
+              <div class="module-content">
+                <p>
+                  Descubra o que acontece no servidor. Processe formulários,
+                  valide dados e conecte sua aplicação ao banco de dados.
+                </p>
+                <div class="topic-tags">
+                  <span>Back-end</span><span>Requisições HTTP</span
+                  ><span>Validação de dados</span>
+                </div>
+                <div class="module-project">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow-up-right" /></svg
+                  >Na prática: o back-end de uma aplicação web.
+                </div>
+              </div>
+            </details>
+            <details class="module" name="curriculum">
+              <summary>
+                <span class="module-number">05</span
+                ><span class="module-logo"
+                  ><img
+                    src="assets/icons/mysql.svg"
+                    alt=""
+                    width="36"
+                    height="36" /></span
+                ><span class="module-name"
+                  ><strong>SQL & MySQL</strong
+                  ><small>Seus dados, no lugar certo</small></span
+                ><svg class="icon module-plus" aria-hidden="true">
+                  <use href="#i-plus" />
+                </svg>
+              </summary>
+              <div class="module-content">
+                <p>
+                  Modele e consulte bancos de dados relacionais. Aprenda a
+                  criar, buscar, atualizar e excluir informações com consultas
+                  parametrizadas.
+                </p>
+                <div class="topic-tags">
+                  <span>Modelagem</span><span>Consultas & JOINs</span
+                  ><span>CRUD com PHP</span>
+                </div>
+                <div class="module-project">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow-up-right" /></svg
+                  >Na prática: uma aplicação com dados persistentes.
+                </div>
+              </div>
+            </details>
+            <details class="module" name="curriculum">
+              <summary>
+                <span class="module-number">06</span
+                ><span class="module-logo"
+                  ><img
+                    src="assets/icons/git.svg"
+                    alt=""
+                    width="32"
+                    height="32" /></span
+                ><span class="module-name"
+                  ><strong>Git, GitHub & deploy</strong
+                  ><small>Seu código merece conhecer o mundo</small></span
+                ><svg class="icon module-plus" aria-hidden="true">
+                  <use href="#i-plus" />
+                </svg>
+              </summary>
+              <div class="module-content">
+                <p>
+                  Versione seu código, organize repositórios e conheça o
+                  processo de colocar seus projetos online.
+                </p>
+                <div class="topic-tags">
+                  <span>Versionamento</span><span>Repositórios</span
+                  ><span>Publicação</span>
+                </div>
+                <div class="module-project">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow-up-right" /></svg
+                  >Na prática: um projeto publicado para compartilhar.
+                </div>
+              </div>
+            </details>
+            <p class="curriculum-disclaimer">
+              além do conteúdo aprofundado, o curso também fará uma introdução a outras linguagens e frameworks, oferecendo um panorama tecnológico mais amplo para que os alunos entendam como diferentes ferramentas se conectam e possam aplicá-las na prática.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="instructor-section section"
+        id="mateus"
+        aria-labelledby="instructor-title"
+      >
+        <div class="container instructor-layout">
+          <div class="instructor-card">
+            <div class="instructor-card-top">
+              <span><span class="status-dot"></span> SEMPRE CONSTRUINDO</span
+              ><svg class="icon" aria-hidden="true"><use href="#i-code" /></svg>
+            </div>
+            <div class="instructor-avatar-wrap">
+              <div class="avatar-orbit" aria-hidden="true"></div>
+              <div class="avatar-dots" aria-hidden="true"></div>
+              <img
+                class="instructor-avatar"
+                src="assets/mateus.jpg"
+                alt="Avatar ilustrado de Mateus Rodrigues, usado em seu portfólio"
+                width="280"
+                height="280"
+                loading="lazy"
+              /><span class="avatar-tag">&lt;dev /&gt;</span>
+            </div>
+            <div class="instructor-card-bottom">
+              <div>
+                <h3>Mateus Rodrigues<span>.</span></h3>
+                <p>Desenvolvedor web</p>
+              </div>
+              <a
+                class="icon-button"
+                href="https://github.com/mateusrmelo-collab"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub de Mateus Rodrigues (abre em nova aba)"
+                ><svg class="icon"><use href="#i-github" /></svg
+              ></a>
+            </div>
+            <div class="instructor-code">
+              <span>const</span> objetivo =
+              <strong>"tirar ideias do papel"</strong>;
+            </div>
+          </div>
+          <div class="instructor-copy">
+            <span class="eyebrow section-eyebrow"
+              ><span class="section-number">03 /</span> QUEM VAI CODAR COM
+              VOCÊ</span
+            >
+            <h2 id="instructor-title">
+              Prazer, Mateus.<br /><span class="muted-heading"
+                >Também movido a código.</span
+              >
+            </h2>
+            <p>
+              Sou Mateus Rodrigues, desenvolvedor apaixonado por transformar
+              ideias em projetos que funcionam. Do visual à lógica, gosto de
+              conectar as peças e construir para a web.
+            </p>
+            <p>
+              No curso, vamos trazer essa visão para a prática: entender o que
+              estamos criando, escrever cada linha com propósito e ver o projeto
+              ganhar vida.
+            </p>
+            <p>
+              Além do conteúdo aprofundado, o curso também fará uma introdução a outras linguagens e frameworks, oferecendo um panorama tecnológico mais amplo para que os alunos entendam como diferentes ferramentas se conectam e possam aplicá-las na prática.
+            </p>
+            <div class="instructor-stack">
+              <div class="stack-heading">
+                <span>MINHA CAIXA DE FERRAMENTAS</span><span>18 SKILLS</span>
+              </div>
+              <div class="stack-group">
+                <span class="stack-group-label">FRONT-END</span>
+                <div class="skill-tags">
+                  <span><img src="assets/icons/html.svg" alt="" />HTML</span
+                  ><span><img src="assets/icons/css.svg" alt="" />CSS</span
+                  ><span
+                    ><img
+                      src="assets/icons/javascript.svg"
+                      alt=""
+                    />JavaScript</span
+                  ><span><img src="assets/icons/react.svg" alt="" />React</span>
+                </div>
+              </div>
+              <div class="stack-group">
+                <span class="stack-group-label">BACK-END & DADOS</span>
+                <div class="skill-tags">
+                  <span><img src="assets/icons/php.svg" alt="" />PHP</span
+                  ><span
+                    ><img src="assets/icons/nodejs.svg" alt="" />Node.js</span
+                  ><span><img src="assets/icons/mysql.svg" alt="" />MySQL</span
+                  ><span
+                    ><img src="assets/icons/mongodb.svg" alt="" />MongoDB</span
+                  ><span
+                    ><img src="assets/icons/python.svg" alt="" />Python</span
+                  ><span><img src="assets/icons/cpp.svg" alt="" />C++</span>
+                </div>
+              </div>
+              <div class="stack-group">
+                <span class="stack-group-label">FERRAMENTAS</span>
+                <div class="skill-tags">
+                  <span
+                    ><img src="assets/icons/vscode.svg" alt="" />VS Code</span
+                  ><span
+                    ><img src="assets/icons/visualstudio.svg" alt="" />Visual
+                    Studio</span
+                  ><span><img src="assets/icons/git.svg" alt="" />Git</span
+                  ><span
+                    ><img
+                      class="invert-icon"
+                      src="assets/icons/github.svg"
+                      alt=""
+                    />GitHub</span
+                  ><span
+                    ><img src="assets/icons/arduino.svg" alt="" />Arduino</span
+                  ><span
+                    ><img
+                      src="assets/icons/composer.svg"
+                      alt=""
+                    />Composer</span
+                  >
+                </div>
+              </div>
+              <div class="stack-group">
+                <span class="stack-group-label">DESIGN & 3D</span>
+                <div class="skill-tags">
+                  <span
+                    ><img src="assets/icons/blender.svg" alt="" />Blender</span
+                  ><span
+                    ><img
+                      class="inkscape-icon"
+                      src="assets/icons/inkscape.svg"
+                      alt=""
+                    />Inkscape</span
+                  >
+                </div>
+              </div>
+            </div>
+            <a
+              class="button button-outline portfolio-link"
+              href="https://mateusrmelo-collab.github.io/DevMateus/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Conheça meu portfólio
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-up-right" /></svg
+              ><span class="sr-only"> (abre em nova aba)</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="faq-section section"
+        id="duvidas"
+        aria-labelledby="faq-title"
+      >
+        <div class="container faq-layout">
+          <div class="faq-intro">
+            <span class="eyebrow section-eyebrow"
+              ><span class="section-number">04 /</span> SEM PONTO DE
+              INTERROGAÇÃO</span
+            >
+            <h2 id="faq-title">
+              Antes do <br />primeiro <span class="accent-text">commit.</span>
+            </h2>
+            <p>Algumas respostas para você<br />chegar com tudo.</p>
+            <svg
+              class="faq-decoration"
+              viewBox="0 0 150 70"
+              aria-hidden="true"
+              fill="none"
+            >
+              <path
+                d="M34 4h-7q-7 0-7 8v12q0 7-8 9 8 2 8 9v12q0 8 7 8h7m82-58h7q7 0 7 8v12q0 7 8 9-8 2-8 9v12q0 8-7 8h-7M64 23c0-11 22-13 22 0 0 8-12 6-12 16m0 12v2"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" name="faq" open>
+              <summary>
+                Preciso saber programar para começar?<svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="#i-plus" />
+                </svg>
+              </summary>
+              <div>
+                <p>
+                  Não. A proposta é começar pelos fundamentos de HTML e CSS e
+                  avançar para lógica, interfaces e banco de dados. Você não
+                  precisa dominar uma linguagem antes de dar o primeiro passo.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" name="faq">
+              <summary>
+                Quais tecnologias fazem parte do curso?<svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="#i-plus" />
+                </svg>
+              </summary>
+              <div>
+                <p>
+                  HTML, CSS, JavaScript, React, PHP e SQL com MySQL formam a
+                  base da jornada. A trilha também inclui Git, GitHub e
+                  publicação de projetos. A stack pessoal de Mateus é mais ampla
+                  e está na seção “Quem ensina”.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" name="faq">
+              <summary>
+                Quando acontece o lançamento?<svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="#i-plus" />
+                </svg>
+              </summary>
+              <div>
+                <p>
+                  Em <strong>15 de setembro de 2026</strong>. A contagem
+                  regressiva desta página considera a meia-noite, no horário de
+                  Brasília (UTC−3). Você pode salvar a data no seu calendário
+                  para não esquecer.
+                </p>
+                <button class="text-link" type="button" data-open-calendar>
+                  Salvar a data
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow-up-right" />
+                  </svg>
+                </button>
+              </div>
+            </details>
+            <details class="faq-item" name="faq">
+              <summary>
+                Qual é o valor e como será o acesso?<svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="#i-plus" />
+                </svg>
+              </summary>
+              <div>
+                <p>
+                  Os valores, o formato das aulas e as condições de acesso ainda
+                  não foram divulgados nesta página. Esses detalhes serão
+                  apresentados no lançamento. Salvar a data não é uma inscrição
+                  nem uma compra.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item" name="faq">
+              <summary>
+                O que preciso para acompanhar?<svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="#i-plus" />
+                </svg>
+              </summary>
+              <div>
+                <p>
+                  Um computador, conexão com a internet e vontade de praticar.
+                  Navegador, editor de código e ferramentas gratuitas compõem o
+                  ambiente de desenvolvimento. Os requisitos específicos serão
+                  informados com a grade detalhada.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-section" aria-labelledby="final-title">
+        <div class="container">
+          <div class="final-card">
+            <div class="final-card-grid" aria-hidden="true"></div>
+            <div class="final-copy">
+              <span class="eyebrow"
+                ><span class="status-dot"></span> SUA PRÓXIMA VERSÃO COMEÇA
+                AQUI</span
+              >
+              <h2 id="final-title">
+                O próximo projeto<br />pode ser <span>o seu.</span>
+              </h2>
+              <p>Uma linha de cada vez. Do zero ao que você imaginar.</p>
+              <button
+                class="button button-primary"
+                type="button"
+                data-open-calendar
+              >
+                Nos vemos em 15 de setembro
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow-up-right" />
+                </svg></button
+              ><small>DESENVOLVIMENTO WEB COM MATEUS RODRIGUES</small>
+            </div>
+            <div class="final-art" aria-hidden="true">
+              <div class="final-orbit"></div>
+              <svg class="icon final-code"><use href="#i-code" /></svg
+              ><svg class="icon final-spark"><use href="#i-spark" /></svg
+              ><span class="final-comment"
+                >O futuro não se escreve sozinho.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <a
+            href="#inicio"
+            class="brand"
+            aria-label="DevMateus, voltar ao início"
+            ><span class="brand-mark"
+              ><svg class="icon"><use href="#i-code" /></svg></span
+            ><span
+              >dev<span class="brand-weight">mateus</span
+              ><span class="brand-dot">.</span></span
+            ></a
+          >
+          <p>Feito de código. Construído com propósito.</p>
+          <div class="footer-links">
+            <a
+              href="https://mateusrmelo-collab.github.io/DevMateus/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Portfólio
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-up-right" /></svg></a
+            ><a
+              href="https://github.com/mateusrmelo-collab"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-up-right" /></svg
+            ></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Mateus Rodrigues. Todos os direitos reservados.</span
+          ><a href="#inicio"
+            >De volta ao topo
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-arrow-up-right" /></svg></a
+          ><span class="footer-status"
+            ><span class="status-dot"></span> PRONTO PARA O PRÓXIMO COMMIT</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <dialog
+      class="calendar-dialog"
+      id="calendar-dialog"
+      aria-labelledby="calendar-title"
+      aria-describedby="calendar-description"
+    >
+      <button
+        class="dialog-close icon-button"
+        type="button"
+        id="close-calendar"
+        aria-label="Fechar lembrete"
+      >
+        <svg class="icon"><use href="#i-close" /></svg>
+      </button>
+      <span class="dialog-symbol"
+        ><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg
+      ></span>
+      <span class="eyebrow">UM LEMBRETE PARA SUA PRÓXIMA VERSÃO</span>
+      <h2 id="calendar-title">Seu próximo capítulo<br />tem data.</h2>
+      <p id="calendar-description">
+        Salve o lançamento do curso de desenvolvimento web com Mateus Rodrigues
+        no seu calendário.
+      </p>
+      <div class="calendar-date">
+        <div class="calendar-day"><strong>15</strong><span>SET</span></div>
+        <div>
+          <strong>Terça-feira, 15 de setembro de 2026</strong
+          ><span>00h · Horário de Brasília (UTC−3)</span
+          ><small>DevMateus · Desenvolvimento web</small>
+        </div>
+      </div>
+      <div id="calendar-options">
+        <a
+          class="button button-primary"
+          id="google-calendar"
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Adicionar ao Google Agenda
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-arrow-up-right" /></svg></a
+        ><button
+          class="button button-outline"
+          type="button"
+          id="download-calendar"
+        >
+          Baixar lembrete (.ics)
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-download" />
+          </svg></button
+        ><small class="calendar-help"
+          >O arquivo .ics funciona com Apple Calendar, Outlook e outros
+          calendários. O lembrete está configurado para 1 dia antes.</small
+        >
+      </div>
+      <a
+        class="button button-primary"
+        id="launched-link"
+        href="https://mateusrmelo-collab.github.io/DevMateus/"
+        target="_blank"
+        rel="noopener noreferrer"
+        hidden
+        >Ver portfólio de Mateus
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-arrow-up-right" /></svg
+      ></a>
+      <p class="calendar-notice">
+        Sem cadastro ou pagamento. Salvar a data não garante uma vaga e não
+        realiza uma inscrição.
+      </p>
+      <p class="dialog-status" id="dialog-status" role="status"></p>
+    </dialog>
+    <div class="toast" id="toast" role="status">
+      <svg class="icon" aria-hidden="true"><use href="#i-check" /></svg
+      ><span id="toast-message"></span>
+    </div>
+    <noscript
+      ><div class="noscript-notice">
+        Lançamento: 15 de setembro de 2026, às 00h (Brasília). Ative o
+        JavaScript para ver a contagem regressiva e salvar o lembrete.
+      </div></noscript
+    >
+  </body>
+</html>
